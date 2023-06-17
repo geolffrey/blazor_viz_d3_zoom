@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\blazor_viz_d3_zoom.props" />
+</Project>
