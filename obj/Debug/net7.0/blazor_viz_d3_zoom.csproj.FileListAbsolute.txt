@@ -826,3 +826,4 @@ C:\Users\geolffrey\source\repos\blazor_viz_d3_zoom\obj\Debug\net7.0\build-gz\+Oc
 C:\Users\geolffrey\source\repos\blazor_viz_d3_zoom\obj\Debug\net7.0\build-gz\xZFTqARK.gz
 C:\Users\geolffrey\source\repos\blazor_viz_d3_zoom\obj\Debug\net7.0\build-gz\DpUwVDBY.gz
 C:\Users\geolffrey\source\repos\blazor_viz_d3_zoom\obj\Debug\net7.0\build-gz\EkAzbm8r.gz
+C:\Users\geolffrey\source\repos\blazor_viz_d3_zoom\obj\Debug\net7.0\scopedcss\Pages\CirclePacking.razor.rz.scp.css

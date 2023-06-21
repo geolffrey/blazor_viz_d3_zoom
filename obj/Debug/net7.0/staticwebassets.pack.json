@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\Pages\\CirclePacking.razor.js",
+      "PackagePath": "staticwebassets\\Pages\\CirclePacking.razor.js"
+    },
+    {
       "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
@@ -71,6 +75,14 @@
     {
       "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\js\\CirclePack.js",
+      "PackagePath": "staticwebassets\\js\\CirclePack.js"
+    },
+    {
+      "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\lib\\d3.v7.min.js",
+      "PackagePath": "staticwebassets\\lib\\d3.v7.min.js"
     },
     {
       "Id": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\sample-data\\weather.json",

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/geolffrey/source/repos/blazor_viz_d3_zoom/Pages/CirclePacking.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2lyY2xlUGFja2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-sq9izj4dpn
+
 [C:/Users/geolffrey/source/repos/blazor_viz_d3_zoom/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-fcj4pkggii

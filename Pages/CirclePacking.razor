@@ -1,0 +1,26 @@
+﻿<div>
+    <button class="btn btn-primary" @onclick="@onClickZoomIn">Zoom In</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomOut">Zoom Out</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomRandom">Zoom Random</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomReset">Zoom Reset</button>
+    <button class="btn btn-primary" @onclick="@onClickUpdate">Update</button>
+    <div class="range">
+        <label class="form-label" for="customRange4">Dots :  @value</label>
+        <input type="range" id="temp" min="1" max="5000" class="form-range" list="markers" step="500" onchange="@onChangeValue" />
+        <datalist id="markers">
+            <option value="0"></option>
+            <option value="500"></option>
+            <option value="1000"></option>
+            <option value="1500"></option>
+            <option value="2000"></option>
+            <option value="2500"></option>
+            <option value="3000"></option>
+            <option value="3500"></option>
+            <option value="4000"></option>
+            <option value="4500"></option>
+            <option value="5000"></option>
+        </datalist>
+       
+    </div>
+</div>
+<div id="chart"></div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sWk526+wz+GIlGiSy/EPKvJ2xS66v59b44slYSfM/pw=",
+  "Hash": "ZkqSiVdejwxoJHplKC7lh90ebaRirBabKbJYc1K3iFw=",
   "Source": "blazor_viz_d3_zoom",
   "BasePath": "/",
   "Mode": "Root",
@@ -6902,6 +6902,23 @@
       "OriginalItemSpec": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\blazor_viz_d3_zoom.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\Pages\\CirclePacking.razor.js",
+      "SourceId": "blazor_viz_d3_zoom",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\",
+      "BasePath": "/",
+      "RelativePath": "Pages/CirclePacking.razor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Pages\\CirclePacking.razor.js"
+    },
+    {
       "Identity": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\css\\app.css",
       "SourceId": "blazor_viz_d3_zoom",
       "SourceType": "Discovered",
@@ -7155,6 +7172,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\js\\CirclePack.js",
+      "SourceId": "blazor_viz_d3_zoom",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/CirclePack.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CirclePack.js"
+    },
+    {
+      "Identity": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\lib\\d3.v7.min.js",
+      "SourceId": "blazor_viz_d3_zoom",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "lib/d3.v7.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\d3.v7.min.js"
     },
     {
       "Identity": "C:\\Users\\geolffrey\\source\\repos\\blazor_viz_d3_zoom\\wwwroot\\sample-data\\weather.json",
