@@ -1,0 +1,66 @@
+﻿@using blazor_viz_d3_zoom.Components
+<OffCanvas Visible="@_Visible" OnClosed="OffCanvasOnClosed">
+    <Header>
+        Selected Item Features
+    </Header>
+    <Content>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>TAG</td>
+                <td>QTY</td>
+            </tr>
+            <tr>
+                <td>@_Element.Id</td>
+                <td>@_Element.Name</td>
+                <td>@_Element.Count</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div style="width:100%;">
+                        <svg>
+                            <circle r="40" cx="40" cy="40" fill="@_Element.Path">
+                                <title>
+                                    @_Element.Id
+                                </title>
+                            </circle>
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </Content>
+</OffCanvas>
+<div>
+    <button class="btn btn-primary" @onclick="@onClickZoomIn">Zoom In</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomOut">Zoom Out</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomRandom">Zoom Random</button>
+    <button class="btn btn-primary" @onclick="@onClickZoomReset">Zoom Reset</button>
+    <button class="btn btn-primary" @onclick="@onClickUpdate">Show side bar</button>
+    <div class="range" style="display:inline;width:30%">
+        <label class="form-label" for="customRange4">Dots :  @_Value</label>
+        <input type="range" id="temp" min="0" max="10000" list="markers" step="500" onchange="@onChangeValue" />
+        <datalist id="markers">
+            <option value="0"></option>
+            <option value="500"></option>
+            <option value="1000"></option>
+            <option value="1000"></option>
+            <option value="2000"></option>
+            <option value="2000"></option>
+            <option value="3000"></option>
+            <option value="3000"></option>
+            <option value="4000"></option>
+            <option value="4000"></option>
+            <option value="5000"></option>
+            <option value="6000"></option>
+            <option value="7000"></option>
+            <option value="8000"></option>
+            <option value="9000"></option>
+            <option value="10000"></option>
+        </datalist>
+    </div>
+</div>
+
+<div id="chart" class="svg-container"></div>
+
+

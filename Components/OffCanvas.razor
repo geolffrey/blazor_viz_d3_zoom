@@ -1,0 +1,60 @@
+﻿@if (Visible)
+{
+    <div class="@CssToggleStyle offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">@Header</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" @onclick="@onClickClose" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            @Content
+        </div>
+    </div>
+}
+<style>
+    .offcanvas-end {
+        position: absolute;
+        z-index: 99;
+        float: right;
+        top: 60px;
+        right: 450px;
+        width: 400px;
+        height: calc(100vh - 100px);
+        border-left: 1px solid rgba(0,0,0,.2);
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+        min-height: 200px;
+        background: white;
+        border-radius: 5px;
+    }
+</style>
+@code {
+    [Parameter] public bool Visible { get; set; } = false;
+    [Parameter] public EventCallback<bool> OnClosed { get; set; } = default!;
+    [Parameter] public RenderFragment Header { get; set; } = default!;
+    [Parameter] public RenderFragment Content { get; set; } = default!;
+
+    private string CssToggleStyle = "offcanvas";
+
+
+    protected override void OnParametersSet()
+    {
+        if (Visible)
+        {
+            CssToggleStyle = ".offcanvas.show";
+        }
+        else
+        {
+            CssToggleStyle = "offcanvas";
+
+
+        }
+    }
+    private async void onClickClose(MouseEventArgs args)
+    {
+        Visible = false;
+
+        if (OnClosed.HasDelegate)
+        {
+            await OnClosed.InvokeAsync(Visible);
+        }
+    }
+}
