@@ -17,7 +17,9 @@ We'll commence by crafting a Blazor WebAssembly version, eschewing the hosted va
 
 Assuming you already have a functional iteration of the recently developed Blazor WebAssembly app, proceed as follows.
 
-In terms of personal preference, the arrangement of your JavaScript assets is a matter of choice. Personally, I find it convenient to house both third-party and custom libraries within a designated directory titled **lib**. Meanwhile, for JavaScript code pertinent to the application itself for global purposes, I tend to organize it within an **js** folder. *See the picture below.*
+In large-scale projects, the organization of code is paramount to ensure smooth maintenance and accessibility. This structure must be engineered to scale gracefully as the project expands, maintaining stable accessibility to files while preserving overall project maintainability. For smaller projects, it may simply be a matter of personal preference.
+
+Regarding personal preferences, the arrangement of your JavaScript assets remains a matter of choice. Personally, I find it convenient to centralize both third-party and custom libraries within a dedicated **lib** directory. Meanwhile, for JavaScript code that serves global purposes within the application, I tend to organize it within a dedicated **js** folder. *See the picture below.*
 
 ![wwwwroor folder structure](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vte4fuxa7pieo78ze3kx.png)
 
@@ -38,18 +40,19 @@ namespace blazor_viz_d3_zoom.Pages
     // a hidden magic, to some extent they are righ, my rationality
     // is keeping my HTML and razor code clean
 
-
     [Route("/circle-packing")] 
     public sealed partial class CirclePacking : ComponentBase, IAsyncDisposable
     {
         [CascadingParameter] Error Error { get; set; } = default!;
         [Inject] IJSRuntime _JSRuntime { get; set; } = default!;
+
         private IJSObjectReference _Module = default!;
         private Element _Element = new Element();
         private int _Value = 0;
         private int _Height = 0;
         private int _Width = 0;
-        private bool _Visible = false;        
+        private bool _Visible = false;
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
@@ -68,6 +71,8 @@ namespace blazor_viz_d3_zoom.Pages
 
                     // Capture browser window inner dimmensions.
                     // this will be used to calculate  the center and use that as the initial point of distributions
+                    // Class BrowserDimmensions is declared at the end of this file.
+
                     var wndDimm = await _Module.InvokeAsync<BrowserDimmensions>("browserDimmensions");
                     _Height = wndDimm.Height;
                     _Width = wndDimm.Width;                    
@@ -126,17 +131,21 @@ namespace blazor_viz_d3_zoom.Pages
 
             return data;
         }
+
         public void OffCanvasOnClosed(bool args)
         {
             _Visible = args;
             StateHasChanged();
         }
+
         private void onClickZoomIn(MouseEventArgs args) => _Module.InvokeVoidAsync("onclickZoomIn");
+
         private void onClickZoomOut(MouseEventArgs args) => _Module.InvokeVoidAsync("onclickZoomOut");
 
         private void onClickZoomRandom(MouseEventArgs args) => _Module.InvokeVoidAsync("onclickzoomRandom");
 
         private void onClickZoomReset(MouseEventArgs args) => _Module.InvokeVoidAsync("onclickzoomReset");
+
         private async Task onChangeValue(ChangeEventArgs arg)
         {
             if (arg is not null && arg.Value is not null)
@@ -161,11 +170,9 @@ namespace blazor_viz_d3_zoom.Pages
         }
     }
 
-    // For the purpose of this application
-    // favoring simplicity I will keep
-    // this class in this file and namespace
-    // anyway, this will be used in this context only
-    // We will work on it later.
+    // For this application, favoring simplicity, I will keep the following class in this file and namespace
+    // and will be used in this context only. We will work on it later.
+
     public sealed class BrowserDimmensions
     {
         public int Width { get; set; } = default!;
