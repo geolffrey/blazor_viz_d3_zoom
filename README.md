@@ -34,7 +34,7 @@ namespace blazor_viz_d3_zoom.Pages
     // Route("/circle-packing") is the same as 
     // the directive '@page /circle-packing' at 
     // the begining of the razor file.
-    // This is a personal preference, and for some a bad practice,
+    // This is a personal preference, and for some, a bad practice,
     // a hidden magic, to some extent they are righ, my rationality
     // is keeping my HTML and razor code clean
 
